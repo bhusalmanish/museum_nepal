@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>museum ticketing system</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="homepage.css">
+    <script src="https://kit.fontawesome.com/251567a26b.js" crossorigin="anonymous"></script>
+    <script src="homepage.js"></script>
+    <script src="jquery.js"></script>
+    <script src="toogle.js"></script>
+</head>
+
+<body class="img">
+
+    <!-- homepage -->
+    <div class="homepage" id="home">
+        <div>
+            <nav class="nav-bar">
+                <div class="logo">
+                    <a href="/"><img src="img/logo.png" alt=""></a>
+                </div>
+                <ul class="primary_navigation">
+                    <li><a href="#"><i class="bi bi-house-door-fill"></i>Home</a></li>
+                    <li><a href="#" onclick="toggleTB()"><i class="bi bi-ticket-fill"></i>Ticket</a></li>
+                    <li><a href="#" onclick="noticelink()"><i class="bi bi-bell-fill"></i>Notice</a></li>
+                </ul>
+                <ul class="secondary_navigation">
+                    <li><a href="#" id="login" onclick="toggleL()">Login</a></li>
+                    <li><a href="#" id="register" onclick="toggleR()">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- text area  -->
+        <header>
+            <div class="header-content">
+                <h1>MUSEUM</h1>
+                <div class="line"></div>
+                <h2>Where past will unroll before your eyes</h2>
+                <a href="#visit" class="button">VISIT US TODAY</a>
+            </div>
+        </header>
+    </div>
+
+    <!-- museums -->
+    <section class="museum" id="visit">
+        <div class="title">
+            <h1>Museum</h1>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="img/narayanhiti.jpg" alt="" srcset="">
+                <h4>Narayanhiti Durbar Museum</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit . Incidunt, eius?</p>
+                <a href="#visit1" class="button">Learn More</a>
+                <a href="#" class="button">Book now</a>
+            </div>
+            <div class="col">
+                <img src="img/national museum.jpg" alt="" srcset="">
+                <h4>National Museum</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit . Incidunt, eius?</p>
+                <a href="#visit2" class="button">Learn More</a>
+                <a href="#" class="button">Book now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- learnmore -->
+
+    <section class="learnmore" id="visit1">
+        <div class="content">
+            <h1>Narayanhiti Durbar Museum</h1>
+            <div class="line"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit velit earum architecto nisi deleniti ex tenetur. Blanditiis deleniti, nemo sint vitae accusamus cupiditate delectus laudantium.</p>
+        </div>
+    </section>
+    <section class="learnmore-1" id="visit2">
+        <div class="content-1">
+            <h1>National Museum</h1>
+            <div class="line"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit velit earum architecto nisi deleniti ex tenetur. Blanditiis deleniti, nemo sint vitae accusamus cupiditate delectus laudantium.</p>
+        </div>
+    </section>
+
+    <!-- login form -->
+
+    <div class="center">
+        <div class="container" id="container1">
+            <label for="show" class="close-btn" onclick="toggleL()" id="cross"><i class="fa fa-times" aria-hidden="true"></i></label>
+            <div class="text">Login Form</div>
+            <form action="#">
+                <div class="data">
+                    <label for="Email">Email</label>
+                    <input type="text" required>
+                </div>
+                <div class="data">
+                    <label for="Password">Password</label>
+                    <input type="password" required>
+                    <div class="forget"><a href="#">Forget password?</a></div>
+                </div>
+                <div class="btn">
+                    <button type="submit">Login</button>
+                    <div class="signup" id="signuplink" onclick="toggleL()">Not a member?<a href="#">signup now</a></div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- register page -->
+
+    <div class="center-1">
+        <div class="container-1" id="container2">
+            <label for="show" class="close-btn" onclick="toggleR()" id="cut1"><i class="fa fa-times" aria-hidden="true"></i></label>
+            <div class="text">Register Now</div>
+            <form action="#">
+                <div class="data-1">
+                    <label for="Name">Name</label>
+                    <input type="text" required>
+                </div>
+                <div class="data-1">
+                    <label for="Email">Email</label>
+                    <input type="text" required>
+                </div>
+                <div class="data-1">
+                    <label for="phone">Phone</label>
+                    <input type="text" required>
+                </div>
+                <div class="data-1">
+                    <label for="password">Password</label>
+                    <input type="password" required>
+                </div>
+                <div class="data-1">
+                    <label for="Password">confirm Password</label>
+                    <input type="password" required>
+                </div>
+                <div class="btn1">
+                    <button type="submit">Submit</button>
+                    <button type="button" onclick="cancelit()">Cancel</button>
+                    <div class="login" onclick="link1()">Already a member?<a href="#">Login</a></div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- ticket -->
+
+    <div class="ticket-form">
+        <div class="ticket-container" id="ticket">
+            <label for="show" class="close-btn" onclick="toggleTB()"><i class="fa fa-times" aria-hidden="true"></i></label>
+            <div class="text">Booking Details</div>
+            <form action="#">
+                <div class="data2">
+                    <label for="name">Museum Name</label>
+                    <select>
+                        <option value="">Select Name </option>
+                        <option value="">Narayanhiti Durbar Museum</option>
+                        <option value="">National Museum</option>
+                    </select>
+                </div>
+                <div class="data2">
+                    <label for="date">Date</label>
+                    <input type="date">
+                </div>
+                <div class="data2">
+                    <label for="ticket-type">Nepali Citizen</label>
+                    <input type="number">
+                </div>
+                <div class="data2">
+                    <label for="ticket-type">Foreign Citizen</label>
+                    <input type="number">
+                </div>
+                <div class="data2">
+                    <label for="ticket-type">Nepali Student</label>
+                    <input type="number">
+                </div>
+                <div class="data2">
+                    <label for="ticket-type">Senior Citizen</label>
+                    <input type="number">
+                </div>
+                <div class="data2">
+                    <label for="ticket-type">Specially Abled</label>
+                    <input type="number">
+                </div>
+                <div class="btn2">
+                    <button type="Confirm" id="ticketdetails" onclick="toggleTD()">Confirm</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- continue to payment -->
+
+    <div class="center-2">
+        <div class="paymentmethod" id="details">
+            <label for="show" class="close-btn" onclick="toggleTD()"><i class="fa fa-times" aria-hidden="true"></i></label>
+            <div class="text">Ticket Details</div>
+            <label for="museum">Museum Name:</label>
+            <span>Narayanhiti</span>
+            <br>
+            <label for="date">Date:</label>
+            <span>2055-5-6</span>
+            <br>
+            <label for="person">No of Person:</label>
+            <div class="line1"></div>
+            <div class="list">
+                <label for="stu">Nepali Student:</label>
+                <span>2</span><br>
+                <label for="ctz">Nepali Citizen:</label>
+                <span>1</span><br>
+                <label for="ctz">Foreign Citizen:</label>
+                <span>5</span><br>
+                <label for="ctz">Senior Citizen:</label>
+                <span>0</span><br>
+                <label for="ctz">Specially Abled:</label>
+                <span>0</span><br>
+            </div>
+            <label for="payment">Payment:</label>
+            <div class="line2"></div>
+            <div class="list">
+                <input name="payment" type="radio">
+                <label for="esewa">Esewa</label><br>
+                <input name="payment" type="radio">
+                <label for="khalti">Khalti</label><br>
+                <input name="payment" type="radio">
+                <label for="cash">Cash</label>
+            </div>
+            <div class="btn3">
+                <button type="submit">Confirm</button>
+                <button type="button" onclick="cancel()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- notice -->
+    <div class="noticepopup" id="notice-close">
+        <label for="show" class="close-btn" onclick="noticeclose()"><i class="fa fa-times" aria-hidden="true"></i></label>
+        <div class="text">Notice</div>
+        <div class="notice">
+            <li><span>museum will remain closed today due to ghode jatra.</span></li>
+            <li><span>museum will remain closed today due to biska jatra.</span></li>
+            <li><span>museum will remain closed today due to gai jatra.</span></li>
+        </div>
+    </div>
+
+    <!-- finalticket -->
+    <div class="center-3">
+        <div class="finalticket" id="">
+            <label for="show" class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></label>
+            <div class="text">Ticket</div>
+            <label for="museum">Museum Name:</label>
+            <span>Narayanhiti</span>
+
+            <br>
+            <label for="date">Date:</label>
+            <span>2055-5-6</span>
+            <br>
+            <label for="person">No of Person:</label>
+            <div class="line1"></div>
+            <div class="list">
+                <label for="stu">Nepali Student:</label>
+                <span>2</span><br>
+                <label for="ctz">Nepali Citizen:</label>
+                <span>1</span><br>
+                <label for="ctz">Foreign Citizen:</label>
+                <span>5</span><br>
+                <label for="ctz">Senior Citizen:</label>
+                <span>0</span><br>
+                <label for="ctz">Specially Abled:</label>
+                <span>0</span><br>
+            </div>
+            <label for="price">Total Price:</label>
+            <span>440</span>
+
+            <div class="btn4">
+                <button type="submit">Download Ticket</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
